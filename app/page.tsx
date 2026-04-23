@@ -19,7 +19,9 @@ export default function BarberShopDemoSite() {
       <section className="mx-auto max-w-6xl px-6 py-20">
         <h1 className="text-5xl font-black">
           Houston cuts that actually look expensive.
-        </h1>
+        </h1><h1 className="text-5xl font-black">
+  BEST BARBER IN HOUSTON 🔥
+</h1>
         <p className="mt-6 text-lg text-zinc-600">
           Fades, tapers, beard work, and clean styling done right.
         </p>
