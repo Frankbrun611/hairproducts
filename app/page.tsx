@@ -3,117 +3,393 @@ export default function Page() {
     {
       name: "Tacos Al Pastor",
       price: "$2.50",
-      desc: "Marinated pork with pineapple & cilantro.",
-      img: "/taco-food1.webp",
+      desc: "Marinated pork with pineapple, onions, cilantro and house salsa.",
+      img: "/tacos-1.webp",
     },
     {
       name: "Mini Tacos Fajita",
       price: "$3.00",
-      desc: "Grilled fajita meat, bold flavor.",
-      img: "/taco-food2.webp",
+      desc: "Grilled fajita meat served mini-style with fresh toppings.",
+      img: "/tacos-2.webp",
     },
     {
       name: "Gorditas",
       price: "$4.00",
-      desc: "Handmade tortilla stuffed with meat.",
-      img: "/taco-food3.webp",
+      desc: "Thick handmade tortilla filled with your choice of meat.",
+      img: "/tacos-3.webp",
+    },
+    {
+      name: "Breakfast Tacos",
+      price: "$1.75",
+      desc: "Fresh breakfast tacos made quick and full of flavor.",
+      img: "/tacos-1.webp",
+    },
+  ];
+
+  const reviews = [
+    {
+      name: "Filoteo Yanez",
+      text: "Been eating the breakfast tacos since they were inside the Valero down the street. Always fresh and very friendly staff. 5 stars.",
+    },
+    {
+      name: "Sherrie Thibodeax",
+      text: "It is located in a parking lot with a gas station. I would not let that stop you. The food was made from scratch and delicious.",
+    },
+    {
+      name: "Christa Villafranca",
+      text: "Toxic Tacos is a hidden gem in Humble! Their tacos are flavorful and perfectly seasoned. Highly recommend stopping by.",
+    },
+  ];
+
+  const features = [
+    {
+      icon: "🌮",
+      title: "Authentic Recipes",
+      text: "Made from scratch every day.",
+    },
+    {
+      icon: "🌶️",
+      title: "Fresh Ingredients",
+      text: "Quality you can taste in every bite.",
+    },
+    {
+      icon: "⏱️",
+      title: "Fast Service",
+      text: "Great food, fast. Every time.",
+    },
+    {
+      icon: "🥤",
+      title: "Dine In or Take Out",
+      text: "Come by or order to go.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white">
-
+    <main className="min-h-screen bg-[#101010] text-white">
       {/* HEADER */}
-      <div className="flex justify-between items-center px-6 py-4 border-b border-white/10">
-        <div className="flex items-center gap-3">
-          <img src="/toxic-logo.png" className="h-12 w-12 object-contain" />
-          <div>
-            <h1 className="text-xl font-bold text-orange-500">TOXIC TACOS</h1>
-            <p className="text-xs text-gray-400">Humble, TX</p>
-          </div>
-        </div>
+      <header className="absolute left-0 top-0 z-40 w-full">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-10">
+          <a href="#home" className="flex items-center gap-3">
+            <img
+              src="/toxic-logo.png"
+              alt="Toxic Tacos logo"
+              className="h-20 w-24 object-contain"
+            />
+          </a>
 
-        <a
-          href="#menu"
-          className="bg-orange-500 px-4 py-2 rounded-full text-black font-bold"
-        >
-          Menu
-        </a>
-      </div>
+          <nav className="hidden items-center gap-9 text-sm font-black uppercase tracking-wide lg:flex">
+            <a href="#home" className="border-b-2 border-[#ff5a13] pb-2">
+              Home
+            </a>
+            <a href="#menu" className="transition hover:text-[#ff5a13]">
+              Menu
+            </a>
+            <a href="#about" className="transition hover:text-[#ff5a13]">
+              About
+            </a>
+            <a href="#gallery" className="transition hover:text-[#ff5a13]">
+              Gallery
+            </a>
+            <a href="#location" className="transition hover:text-[#ff5a13]">
+              Location
+            </a>
+            <a href="#contact" className="transition hover:text-[#ff5a13]">
+              Contact
+            </a>
+          </nav>
+
+          <a
+            href="#location"
+            className="rounded-md bg-[#ff5a13] px-6 py-3 text-sm font-black uppercase text-white shadow-lg transition hover:bg-orange-600"
+          >
+            Order Now
+          </a>
+        </div>
+      </header>
 
       {/* HERO */}
-      <div className="px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-5xl font-bold leading-tight">
-            Real Tacos.
-            <br />
-            <span className="text-orange-500">Real Flavor.</span>
-          </h2>
+      <section
+        id="home"
+        className="relative min-h-[760px] overflow-hidden bg-[#080808]"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_34%,rgba(255,90,19,0.36),transparent_34%),radial-gradient(circle_at_12%_42%,rgba(47,107,47,0.5),transparent_36%)]" />
 
-          <p className="mt-4 text-gray-400 text-lg">
-            Serving Humble the best tacos, fajitas, gorditas & more.
-          </p>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute left-[-8%] top-[28%] h-80 w-80 rounded-full bg-[#2f6b2f] blur-3xl" />
+          <div className="absolute right-[8%] top-[18%] h-96 w-96 rounded-full bg-[#ff5a13] blur-3xl" />
+          <div className="absolute bottom-[-10%] right-[20%] h-72 w-72 rounded-full bg-yellow-500 blur-3xl" />
+        </div>
 
-          <div className="mt-6 flex gap-4">
-            <a
-              href="#menu"
-              className="bg-orange-500 px-6 py-3 rounded-full font-bold text-black"
-            >
-              View Menu
-            </a>
-            <a
-              href="#location"
-              className="border border-white px-6 py-3 rounded-full"
-            >
-              Find Us
-            </a>
+        {/* Brush-like dark panel */}
+        <div className="absolute left-0 top-0 z-10 hidden h-full w-[58%] bg-gradient-to-r from-black via-black/95 to-black/35 lg:block" />
+
+        {/* Food image cluster */}
+        <div className="absolute right-0 top-0 z-0 hidden h-full w-[62%] lg:block">
+          <img
+            src="/tacos-1.webp"
+            alt="Tacos"
+            className="absolute right-[-20px] top-24 h-[560px] w-[680px] rotate-3 rounded-[2rem] object-cover shadow-2xl"
+          />
+          <img
+            src="/tacos-2.webp"
+            alt="Mini tacos"
+            className="absolute right-[360px] top-[300px] h-[260px] w-[360px] -rotate-6 rounded-[2rem] object-cover shadow-2xl"
+          />
+          <img
+            src="/tacos-3.webp"
+            alt="Gorditas"
+            className="absolute right-[40px] top-[430px] h-[240px] w-[350px] rotate-6 rounded-[2rem] object-cover shadow-2xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-black/10 via-transparent to-black/70" />
+        </div>
+
+        <div className="relative z-20 mx-auto max-w-7xl px-6 pt-36 lg:px-10">
+          <div className="max-w-2xl py-20">
+            <h1 className="text-6xl font-black uppercase leading-[0.88] tracking-tight text-white sm:text-7xl lg:text-8xl">
+              Real Tacos.
+              <br />
+              <span className="text-[#ff5a13]">Real Flavor.</span>
+            </h1>
+
+            <p className="mt-8 max-w-xl text-2xl font-bold leading-tight text-white">
+              Serving Humble the best tacos, tortas, menudo & more!
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-5">
+              <a
+                href="#menu"
+                className="rounded-md bg-[#ff5a13] px-8 py-4 font-black uppercase text-white shadow-lg transition hover:bg-orange-600"
+              >
+                View Menu
+              </a>
+              <a
+                href="#location"
+                className="rounded-md border-2 border-white px-8 py-4 font-black uppercase text-white transition hover:bg-white hover:text-black"
+              >
+                Get Directions
+              </a>
+            </div>
+
+            <div className="mt-10">
+              <p className="text-2xl text-yellow-400">★★★★★</p>
+              <p className="mt-2 text-lg">
+                <span className="font-black">4.5 Stars</span> on Google
+              </p>
+              <p className="text-white/70">
+                140+ reviews from happy customers
+              </p>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-2 gap-4">
-          <img src="/taco-food1.webp" className="rounded-xl" />
-          <img src="/taco-food2.webp" className="rounded-xl" />
-          <img src="/taco-food3.webp" className="rounded-xl col-span-2" />
-        </div>
-      </div>
+      {/* GREEN FEATURE STRIP */}
+      <section className="relative bg-[#2f6b2f] py-10">
+        <div className="absolute inset-x-0 -top-5 h-8 bg-[#2f6b2f]" />
 
-      {/* MENU */}
-      <div id="menu" className="px-6 py-16 bg-white text-black">
-        <h2 className="text-3xl font-bold text-center">Menu Highlights</h2>
-
-        <div className="mt-10 grid md:grid-cols-3 gap-6">
-          {menu.map((item) => (
-            <div key={item.name} className="rounded-xl overflow-hidden shadow-lg">
-              <img src={item.img} className="h-48 w-full object-cover" />
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-orange-500">
-                  {item.name}
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-4 lg:px-10">
+          {features.map((feature) => (
+            <div key={feature.title} className="flex items-start gap-4">
+              <div className="text-5xl text-[#ff5a13]">{feature.icon}</div>
+              <div>
+                <h3 className="text-lg font-black uppercase leading-tight">
+                  {feature.title}
                 </h3>
-                <p className="mt-2 text-gray-600">{item.desc}</p>
-                <p className="mt-4 font-bold text-lg">{item.price}</p>
+                <p className="mt-1 text-sm leading-6 text-white/85">
+                  {feature.text}
+                </p>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </section>
 
-      {/* LOCATION */}
-      <div id="location" className="px-6 py-16 text-center">
-        <h2 className="text-3xl font-bold">Visit Toxic Tacos</h2>
+      {/* MENU */}
+      <section id="menu" className="bg-[#101010] px-6 py-20 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <p className="text-center text-sm font-black uppercase tracking-[0.3em] text-[#ff5a13]">
+            Favorites
+          </p>
 
-        <p className="mt-4 text-gray-400">
-          Humble, TX • 4.5★ Google Rating
-        </p>
+          <h2 className="mt-3 text-center text-5xl font-black uppercase tracking-tight text-white">
+            Menu Highlights
+          </h2>
 
-        <a className="inline-block mt-6 bg-orange-500 px-6 py-3 rounded-full font-bold text-black">
-          Get Directions
-        </a>
-      </div>
+          <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-[#ff5a13]" />
 
-      {/* FOOTER */}
-      <div className="text-center text-gray-500 py-6 border-t border-white/10">
-        © 2026 Toxic Tacos
-      </div>
-    </div>
+          <div className="mt-12 grid gap-7 md:grid-cols-2 lg:grid-cols-4">
+            {menu.map((item) => (
+              <div
+                key={item.name}
+                className="overflow-hidden rounded-xl bg-[#f8efe4] text-stone-950 shadow-2xl transition hover:-translate-y-1 hover:shadow-orange-500/20"
+              >
+                <div className="h-56 bg-white">
+                  <img
+                    src={item.img}
+                    alt={item.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-black uppercase text-[#ff5a13]">
+                    {item.name}
+                  </h3>
+                  <p className="mt-3 min-h-[72px] text-sm leading-6 text-stone-700">
+                    {item.desc}
+                  </p>
+                  <p className="mt-4 text-2xl font-black text-[#2f6b2f]">
+                    {item.price}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <a
+              href="#location"
+              className="inline-block rounded-md bg-[#ff5a13] px-10 py-4 font-black uppercase text-white shadow-lg transition hover:bg-orange-600"
+            >
+              View Full Menu
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT / GALLERY */}
+      <section id="about" className="bg-[#f8efe4] px-6 py-20 text-stone-950 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.3em] text-[#ff5a13]">
+              About Toxic Tacos
+            </p>
+            <h2 className="mt-4 text-5xl font-black uppercase leading-tight">
+              Built for flavor, speed, and loyal customers.
+            </h2>
+            <p className="mt-6 text-lg leading-8 text-stone-700">
+              Toxic Tacos serves breakfast tacos, tortas, menudo, tacos,
+              gorditas and more. The goal of this website is simple: make people
+              hungry fast, help them find the location, and give the restaurant a
+              stronger online presence than a social page alone.
+            </p>
+          </div>
+
+          <div id="gallery" className="grid gap-5 sm:grid-cols-3">
+            <div className="overflow-hidden rounded-2xl bg-white shadow-xl sm:col-span-2">
+              <img
+                src="/tacos-1.webp"
+                alt="Taco plate"
+                className="h-80 w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
+              <img
+                src="/tacos-2.webp"
+                alt="Taco closeup"
+                className="h-80 w-full object-cover"
+              />
+            </div>
+            <div className="overflow-hidden rounded-2xl bg-white shadow-xl">
+              <img
+                src="/tacos-3.webp"
+                alt="Gordita"
+                className="h-64 w-full object-cover"
+              />
+            </div>
+            <div className="rounded-2xl bg-[#2f6b2f] p-8 text-white shadow-xl sm:col-span-2">
+              <p className="text-sm font-black uppercase tracking-[0.25em] text-white/70">
+                Customer Favorite
+              </p>
+              <h3 className="mt-3 text-3xl font-black uppercase">
+                Fresh tacos, quick service, and food people remember.
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section id="reviews" className="bg-[#f8efe4] px-6 pb-20 text-stone-950 lg:px-10">
+        <div className="mx-auto max-w-7xl">
+          <h2 className="text-center text-5xl font-black uppercase">
+            What Our <span className="text-[#2f6b2f]">Customers Say</span>
+          </h2>
+
+          <div className="mx-auto mt-4 h-1 w-20 rounded-full bg-[#2f6b2f]" />
+
+          <div className="mt-12 grid gap-8 lg:grid-cols-3">
+            {reviews.map((review) => (
+              <div
+                key={review.name}
+                className="rounded-xl border border-orange-200 bg-white p-8 shadow-sm"
+              >
+                <p className="text-2xl text-[#ff5a13]">★★★★★</p>
+                <p className="mt-5 leading-7 text-stone-700">
+                  “{review.text}”
+                </p>
+                <p className="mt-8 font-bold italic">- {review.name}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 text-center">
+            <button className="rounded-md border border-stone-300 bg-white px-8 py-3 font-black uppercase shadow-sm">
+              See More Reviews
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* LOCATION / FOOTER */}
+      <section id="location" className="bg-[#101010] px-6 py-16 lg:px-10">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+          <div>
+            <h3 className="text-2xl font-black uppercase">Visit Us</h3>
+            <p className="mt-5 text-white/70">
+              3103 Wilson Rd
+              <br />
+              Humble, TX 77396
+              <br />
+              United States
+            </p>
+            <a
+              href="#"
+              className="mt-7 inline-block rounded-md bg-[#2f6b2f] px-7 py-3 font-black uppercase text-white transition hover:bg-green-700"
+            >
+              Get Directions
+            </a>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-black uppercase">Hours</h3>
+            <p className="mt-5 text-white/70">
+              Monday - Saturday
+              <br />
+              6:00 AM - 9:00 PM
+              <br />
+              <br />
+              Sunday
+              <br />
+              6:00 AM - 8:00 PM
+            </p>
+          </div>
+
+          <div id="contact">
+            <h3 className="text-2xl font-black uppercase">Follow Us</h3>
+            <p className="mt-5 text-white/70">Facebook • Instagram</p>
+            <img
+              src="/toxic-logo.png"
+              alt="Toxic Tacos"
+              className="mt-8 h-24 w-40 object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer className="bg-[#2f6b2f] py-5 text-center text-sm text-white/80">
+        © 2026 Toxic Tacos. All Rights Reserved.
+      </footer>
+    </main>
   );
 }
