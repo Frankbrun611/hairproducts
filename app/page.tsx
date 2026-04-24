@@ -125,6 +125,7 @@ export default function Page() {
         {/* Food image cluster */}
 {/* Food image cluster */}
 <div className="relative z-30 mx-auto mt-6 flex max-w-md items-center justify-center lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[62%] lg:max-w-none">
+ <div className="max-w-2xl rounded-3xl bg-black/45 p-6 backdrop-blur-sm lg:bg-transparent lg:p-0"></div>
   <img
     src="/tacos-1.webp"
     alt="Tacos"
