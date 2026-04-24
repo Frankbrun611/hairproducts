@@ -120,11 +120,11 @@ export default function Page() {
         </div>
 
         {/* Brush-like dark panel */}
-        <div className="absolute left-0 top-0 z-10 hidden h-full w-[58%] bg-gradient-to-r from-black via-black/95 to-black/35 lg:block" />
+        <div className="absolute left-0 top-0 z-0 hidden h-full w-[58%] bg-gradient-to-r from-black via-black/95 to-black/35 lg:block" />
 
         {/* Food image cluster */}
 {/* Food image cluster */}
-<div className="relative z-10 mx-auto mt-6 flex max-w-md items-center justify-center lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[62%] lg:max-w-none">
+<div className="relative z-30 mx-auto mt-6 flex max-w-md items-center justify-center lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[62%] lg:max-w-none">
   <img
     src="/tacos-1.webp"
     alt="Tacos"
