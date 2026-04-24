@@ -108,10 +108,11 @@ export default function Page() {
       </header>
 
       {/* HERO */}
-<section
-  id="home"
-  className="relative min-h-[900px] overflow-hidden bg-[#080808] lg:min-h-[760px]"
-></section>        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_34%,rgba(255,90,19,0.36),transparent_34%),radial-gradient(circle_at_12%_42%,rgba(47,107,47,0.5),transparent_36%)]" />
+      <section
+        id="home"
+        className="relative min-h-[760px] overflow-hidden bg-[#080808]"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_72%_34%,rgba(255,90,19,0.36),transparent_34%),radial-gradient(circle_at_12%_42%,rgba(47,107,47,0.5),transparent_36%)]" />
 
         <div className="absolute inset-0 opacity-20">
           <div className="absolute left-[-8%] top-[28%] h-80 w-80 rounded-full bg-[#2f6b2f] blur-3xl" />
@@ -120,28 +121,68 @@ export default function Page() {
         </div>
 
         {/* Brush-like dark panel */}
-        <div className="absolute left-0 top-0 z-0 hidden h-full w-[58%] bg-gradient-to-r from-black via-black/95 to-black/35 lg:block" />
+        <div className="absolute left-0 top-0 z-10 hidden h-full w-[58%] bg-gradient-to-r from-black via-black/95 to-black/35 lg:block" />
 
         {/* Food image cluster */}
-{/* Food image cluster */}
-<div className="relative z-30 mx-auto mt-6 flex max-w-md items-center justify-center lg:absolute lg:right-0 lg:top-0 lg:h-full lg:w-[62%] lg:max-w-none">
- <div className="max-w-2xl rounded-3xl bg-black/45 p-6 backdrop-blur-sm lg:bg-transparent lg:p-0"></div>
-  <img
-    src="/tacos-1.webp"
-    alt="Tacos"
-    className="h-64 w-64 rounded-[2rem] object-cover shadow-2xl sm:h-80 sm:w-80 lg:absolute lg:right-[-20px] lg:top-24 lg:h-[560px] lg:w-[680px] lg:rotate-3"
-  />
-  <img
-    src="/tacos-2.webp"
-    alt="Mini tacos"
-    className="absolute left-4 top-20 h-32 w-40 -rotate-6 rounded-[1.5rem] object-cover shadow-2xl sm:h-40 sm:w-52 lg:right-[360px] lg:left-auto lg:top-[300px] lg:h-[260px] lg:w-[360px]"
-  />
-  <img
-    src="/tacos-3.webp"
-    alt="Gorditas"
-    className="absolute right-4 top-28 h-32 w-40 rotate-6 rounded-[1.5rem] object-cover shadow-2xl sm:h-40 sm:w-52 lg:right-[40px] lg:top-[430px] lg:h-[240px] lg:w-[350px]"
-  />
-</div>
+        <div className="absolute right-0 top-0 z-0 hidden h-full w-[62%] lg:block">
+          <img
+            src="/tacos-1.webp"
+            alt="Tacos"
+            className="absolute right-[-20px] top-24 h-[560px] w-[680px] rotate-3 rounded-[2rem] object-cover shadow-2xl"
+          />
+          <img
+            src="/tacos-2.webp"
+            alt="Mini tacos"
+            className="absolute right-[360px] top-[300px] h-[260px] w-[360px] -rotate-6 rounded-[2rem] object-cover shadow-2xl"
+          />
+          <img
+            src="/tacos-3.webp"
+            alt="Gorditas"
+            className="absolute right-[40px] top-[430px] h-[240px] w-[350px] rotate-6 rounded-[2rem] object-cover shadow-2xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-l from-black/10 via-transparent to-black/70" />
+        </div>
+
+        <div className="relative z-20 mx-auto max-w-7xl px-6 pt-36 lg:px-10">
+          <div className="max-w-2xl py-20">
+            <h1 className="text-6xl font-black uppercase leading-[0.88] tracking-tight text-white sm:text-7xl lg:text-8xl">
+              Real Tacos.
+              <br />
+              <span className="text-[#ff5a13]">Real Flavor.</span>
+            </h1>
+
+            <p className="mt-8 max-w-xl text-2xl font-bold leading-tight text-white">
+              Serving Humble the best tacos, tortas, menudo & more!
+            </p>
+
+            <div className="mt-8 flex flex-wrap gap-5">
+              <a
+                href="#menu"
+                className="rounded-md bg-[#ff5a13] px-8 py-4 font-black uppercase text-white shadow-lg transition hover:bg-orange-600"
+              >
+                View Menu
+              </a>
+              <a
+                href="#location"
+                className="rounded-md border-2 border-white px-8 py-4 font-black uppercase text-white transition hover:bg-white hover:text-black"
+              >
+                Get Directions
+              </a>
+            </div>
+
+            <div className="mt-10">
+              <p className="text-2xl text-yellow-400">★★★★★</p>
+              <p className="mt-2 text-lg">
+                <span className="font-black">4.5 Stars</span> on Google
+              </p>
+              <p className="text-white/70">
+                140+ reviews from happy customers
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GREEN FEATURE STRIP */}
       <section className="relative bg-[#2f6b2f] py-10">
         <div className="absolute inset-x-0 -top-5 h-8 bg-[#2f6b2f]" />
